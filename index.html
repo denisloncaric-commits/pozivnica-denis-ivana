@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis & Ivana | 10.10.2026.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <p class="loader-text">Učitavanje...</p>
+        </div>
+    </div>
+
+    <!-- Gold Particles Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">D & I</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Početna</a>
+            <a href="#story" class="nav-link">Naša Priča</a>
+            <a href="#details" class="nav-link">Detalji</a>
+            <a href="#rsvp" class="nav-link">Potvrda Dolaska</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle animate-fade-in">Vjenčanje</p>
+            <h1 class="hero-names">
+                <span class="name-left animate-slide-right">Denis</span>
+                <span class="ampersand animate-scale-in">&</span>
+                <span class="name-right animate-slide-left">Ivana</span>
+            </h1>
+            <div class="hero-date animate-fade-in-up">
+                <span class="date-line"></span>
+                <p>10. listopada 2026.</p>
+                <span class="date-line"></span>
+            </div>
+            <p class="hero-venue animate-fade-in-up">Restoran Zrinski | Dom Hv</p>
+            <a href="#details" class="hero-btn animate-fade-in-up">Pogledaj Detalje</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-content scroll-reveal">
+            <div class="quote-icon">&#10077;</div>
+            <blockquote>
+                Ljubav je jedina stvar koja raste kada se dijeli.
+            </blockquote>
+            <cite>— Antoine de Saint-Exupéry</cite>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <p class="section-subtitle">Naša Priča</p>
+                <h2 class="section-title">Od prvog pogleda do vječnosti</h2>
+            </div>
+            <div class="story-timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Prvi Susret</h3>
+                        <p>Taj trenutak kad se svijet zaustavio i sve se promijenilo. Jedan pogled koji je definirao našu budućnost.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Prvi Spoj</h3>
+                        <p>Smeh, nespretnost i onaj osjećaj da poznajemo jedno drugo cijelu vječnost. Već tada znali smo — ovo je nešto posebno.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Zaruke</h3>
+                        <p>"Da" koja je promijenila sve. Odluka da kročimo zajedno u najljepšu avanturu života.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot gold"></div>
+                    <div class="timeline-content">
+                        <h3>Vjenčanje</h3>
+                        <p class="highlight">10. listopada 2026. — dan kad postajemo jedno. Čekamo vas da s nama podijelite tu radost!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="countdown-overlay"></div>
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <p class="section-subtitle light">Do Našeg Dana</p>
+                <h2 class="section-title light">Ostalo je još...</h2>
+            </div>
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item scroll-reveal">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Dana</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item scroll-reveal">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Sati</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item scroll-reveal">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minuta</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item scroll-reveal">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Sekundi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="details-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <p class="section-subtitle">Informacije</p>
+                <h2 class="section-title">Detalji Događaja</h2>
+            </div>
+            <div class="details-grid">
+                <div class="detail-card scroll-reveal">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Ceremonija</h3>
+                    <p class="detail-time">16:00 sati</p>
+                    <p class="detail-text">Crkveni blagoslov i slavlje ljubavi u predivnom ambijentu.</p>
+                </div>
+                <div class="detail-card scroll-reveal">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Lokacija</h3>
+                    <p class="detail-time">Restoran Zrinski</p>
+                    <p class="detail-text">Dom Hv<br>Trg hrvatskih velikana 1, 44000 Sisak</p>
+                    <a href="https://maps.google.com/?q=Restoran+Zrinski+Sisak" target="_blank" class="map-link">Prikaži na karti &rarr;</a>
+                </div>
+                <div class="detail-card scroll-reveal">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Proslava</h3>
+                    <p class="detail-time">Do zore</p>
+                    <p class="detail-text">Gourmet večera, izvrsna vina, glazba i ples cijele noći!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="dresscode-section">
+        <div class="container">
+            <div class="dresscode-content scroll-reveal">
+                <p class="section-subtitle">Dress Code</p>
+                <h2 class="section-title">Formalna Odjeća</h2>
+                <p class="dresscode-text">
+                    Poštovani gosti, željeli bismo da ovaj dan bude poseban za sve nas. <br>
+                    Molimo vas da se pridržavate formalnog dress code-a.
+                </p>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: #1a1a2e;" title="Tamno plava"></div>
+                    <div class="color-swatch" style="background: #722f37;" title="Bordo"></div>
+                    <div class="color-swatch" style="background: #2d5016;" title="Tamno zelena"></div>
+                    <div class="color-swatch" style="background: #c9a84c;" title="Zlato"></div>
+                    <div class="color-swatch" style="background: #f5f0e6;" title="Krem"></div>
+                </div>
+                <p class="palette-note">Preporučene boje</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="rsvp-overlay"></div>
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <p class="section-subtitle light">Potvrdite Dolazak</p>
+                <h2 class="section-title light">RSVP</h2>
+            </div>
+            <div class="rsvp-form-wrapper scroll-reveal">
+                <p class="rsvp-note">Molimo vas da potvrdite svoj dolazak do <strong>1. rujna 2026.</strong></p>
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Ime i Prezime *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" ">
+                            <label for="email">Email Adresa</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="attending" required>
+                                <option value="" disabled selected>Odaberite...</option>
+                                <option value="yes">S veseljem dolazim!</option>
+                                <option value="no">Na žalost, ne mogu doći.</option>
+                            </select>
+                            <label for="attending">Potvrda Dolaska *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="guests" min="1" max="5" value="1" placeholder=" ">
+                            <label for="guests">Broj Gostiju</label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" rows="3" placeholder=" "></textarea>
+                        <label for="message">Posebna Napomena (alergije, prehrana...)</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Pošalji Potvrdu</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </form>
+                <div id="formSuccess" class="form-success">
+                    <div class="success-icon">&#10003;</div>
+                    <h3>Hvala Vam!</h3>
+                    <p>Vaša potvrda je zaprimljena. Radujemo se vašem dolasku!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-names">Denis & Ivana</h2>
+            <p class="footer-date">10.10.2026.</p>
+            <div class="footer-decor">
+                <span></span>
+                <span>&#10047;</span>
+                <span></span>
+            </div>
+            <p class="footer-text">Radujemo se što ćete biti dio našeg posebnog dana!</p>
+            <p class="footer-credit">S ljubavlju stvoreno &bull; 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
